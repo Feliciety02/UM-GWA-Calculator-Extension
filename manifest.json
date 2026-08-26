@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "GradeGlow GWA Calculator",
-  "short_name": "GradeGlow",
+  "name": "GWA Gah?",
+  "short_name": "GWA Gah",
   "version": "2.0.0",
   "description": "A gamified GWA calculator for the UM Student Portal with rank system, progress bar, and clean UI.",
   "icons": {

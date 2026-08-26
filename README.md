@@ -1,6 +1,6 @@
-# GradeGlow GWA Calculator
+# GWA Gah?
 
-A yellow-and-blue Chrome extension that calculates a weighted GWA directly on the UM Student Portal permanent-record page.
+A gamified Chrome extension that calculates a weighted GWA directly on the UM Student Portal permanent-record page.
 
 ## Rules
 
