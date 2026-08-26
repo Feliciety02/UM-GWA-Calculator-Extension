@@ -66,6 +66,42 @@
   color: var(--um-text-sub);
 }
 
+/* ── Grading System Toggle ── */
+#um-gwa-calculator .um-sys-toggle {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--um-border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+#um-gwa-calculator .um-sys-btn {
+  flex: 1;
+  padding: 0.55rem 0.75rem;
+  border: none;
+  background: var(--um-bg);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--um-text-sub);
+  transition: all 0.15s ease;
+}
+
+#um-gwa-calculator .um-sys-btn:first-child {
+  border-right: 1px solid var(--um-border);
+}
+
+#um-gwa-calculator .um-sys-btn.active {
+  background: var(--um-blue);
+  color: #fff;
+}
+
+#um-gwa-calculator .um-sys-btn:hover:not(.active) {
+  background: var(--um-border);
+}
+
 /* ── Rank Banner ── */
 #um-gwa-calculator .um-rank {
   text-align: center;

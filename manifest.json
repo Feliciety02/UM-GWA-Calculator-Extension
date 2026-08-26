@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "GWA Gah?",
   "short_name": "GWA Gah",
-  "version": "2.0.0",
-  "description": "A gamified GWA calculator for the UM Student Portal with rank system, progress bar, and clean UI.",
+  "version": "2.1.0",
+  "description": "A gamified GWA calculator for UM Davao students with Old/New grading system selector, rank system, progress bar, and grade reference.",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
