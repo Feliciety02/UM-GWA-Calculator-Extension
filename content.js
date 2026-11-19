@@ -209,6 +209,19 @@
 
   /* ── UI ── */
 
+  // Same drawing as docs/logo.svg and icons/: a calculator whose display reads "GG".
+  const LOGO_SVG = `<svg class="um-logo" viewBox="0 0 128 128" aria-hidden="true">
+    <rect width="128" height="128" rx="30" fill="#2563eb"/>
+    <rect x="24" y="20" width="80" height="36" rx="9" fill="#fff"/>
+    <text x="95" y="48" text-anchor="end" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="800" fill="#2563eb">GG</text>
+    <rect x="24" y="66" width="34" height="20" rx="7" fill="#fff" fill-opacity=".35"/>
+    <rect x="70" y="66" width="34" height="20" rx="7" fill="#fff" fill-opacity=".35"/>
+    <rect x="24" y="94" width="34" height="20" rx="7" fill="#fff" fill-opacity=".35"/>
+    <rect x="70" y="94" width="34" height="20" rx="7" fill="#fbbf24"/>
+    <rect x="80" y="98" width="14" height="4" rx="2" fill="#2563eb"/>
+    <rect x="80" y="106" width="14" height="4" rx="2" fill="#2563eb"/>
+  </svg>`;
+
   function el(tag, cls, html) {
     const e = document.createElement(tag);
     if (cls) e.className = cls;
@@ -226,39 +239,46 @@
     const panel = el("section", null);
     panel.id = PANEL_ID;
 
-    // Header
+    // Header: logo + name on the left, grading system switch on the right
     const header = el("div", "um-header",
-      `<div class="um-icon">📊</div>
+      `${LOGO_SVG}
        <div class="um-header-text">
-         <h3>UM GWA Calculator</h3>
-         <p>Academic performance tracker</p>
+         <h3>GWA Gah?</h3>
+         <p>UM GWA Calculator</p>
        </div>`
     );
 
-    // System selector
     const sysToggle = el("div", "um-sys-toggle");
-    const oldBtn = el("button", `um-sys-btn ${sys === "old" ? "active" : ""}`, "Old (1.0–5.0)");
+    sysToggle.setAttribute("role", "group");
+    sysToggle.setAttribute("aria-label", "Grading system");
+    const oldBtn = el("button", `um-sys-btn ${sys === "old" ? "active" : ""}`, "Old 1–5");
     oldBtn.type = "button";
+    oldBtn.title = "Old system: 1.0–5.0, lower is better";
+    oldBtn.setAttribute("aria-pressed", String(sys === "old"));
     oldBtn.addEventListener("click", () => { setSystem("old"); renderCalculator(); });
-    const newBtn = el("button", `um-sys-btn ${sys === "new" ? "active" : ""}`, "New (1.0–4.0)");
+    const newBtn = el("button", `um-sys-btn ${sys === "new" ? "active" : ""}`, "New 1–4");
     newBtn.type = "button";
+    newBtn.title = "New system: 1.0–4.0, higher is better";
+    newBtn.setAttribute("aria-pressed", String(sys === "new"));
     newBtn.addEventListener("click", () => { setSystem("new"); renderCalculator(); });
     sysToggle.append(oldBtn, newBtn);
+    header.appendChild(sysToggle);
 
-    // Rank banner
-    const rankBanner = el("div", `um-rank ${rank.cls}`,
-      `<div class="um-rank-badge">${rank.badge}</div>
-       <div class="um-rank-gwa">${fmt(result.gwa)}</div>
-       <div class="um-rank-title">${rank.title}</div>
-       <div class="um-rank-sub">${rank.sub}</div>`
+    // The GWA itself, with its rank as a quiet tag
+    const pMin = sys === "old" ? "1.00 Best" : "1.00 Fail";
+    const pMax = sys === "old" ? "5.00 Fail" : "4.00 Best";
+    const rankBanner = el("div", "um-rank",
+      `<div class="um-rank-label">Your GWA</div>
+       <div class="um-rank-row">
+         <div class="um-rank-gwa">${fmt(result.gwa)}</div>
+         <div class="um-rank-tag ${rank.cls}"><span class="um-rank-dot"></span>${rank.title}<span class="um-rank-sub">${rank.sub}</span></div>
+       </div>`
     );
 
     // Progress
-    const pMin = sys === "old" ? "1.00 Best" : "1.00 Fail";
-    const pMax = sys === "old" ? "5.00 Fail" : "4.00 Best";
     const progress = el("div", "um-progress-wrap",
-      `<div class="um-progress-label"><span>${pMin}</span><span>${pMax}</span></div>
-       <div class="um-progress-bar"><div class="um-progress-fill" style="width:${pct}%"></div></div>`
+      `<div class="um-progress-bar"><div class="um-progress-fill" style="width:${pct}%"></div></div>
+       <div class="um-progress-label"><span>${pMin}</span><span>${pMax}</span></div>`
     );
 
     // Stats
@@ -271,8 +291,8 @@
     // Formula
     const formula = el("div", "um-formula",
       Number.isFinite(result.gwa)
-        ? `${fmt(result.weightedPoints, 2)} ÷ ${fmt(result.totalUnits, 1)} = ${fmt(result.gwa, 4)}`
-        : "No valid courses found."
+        ? `<span>Grade × units ÷ units</span><span>${fmt(result.weightedPoints, 2)} ÷ ${fmt(result.totalUnits, 1)} = ${fmt(result.gwa, 4)}</span>`
+        : "<span>No valid courses found.</span>"
     );
 
     // Conversion reference
@@ -303,8 +323,7 @@
     }
 
     if (result.excluded.length) {
-      const exH = el("div", null, "Excluded Entries");
-      exH.style.cssText = "font-size:0.78rem;font-weight:700;margin:0.75rem 0 0.4rem;color:#64748b;";
+      const exH = el("div", "um-subhead", "Not counted");
       body.appendChild(exH);
       const exList = el("ul", "um-excluded-list");
       result.excluded.forEach((c) => {
@@ -341,7 +360,7 @@
     );
 
     // Assemble
-    panel.append(header, sysToggle, rankBanner, progress, stats, formula, refDetails, details, actions, note);
+    panel.append(header, rankBanner, progress, stats, formula, refDetails, details, actions, note);
 
     const tableContainer = table.closest(".card") || table.parentElement;
     tableContainer.parentElement.insertBefore(panel, tableContainer);
