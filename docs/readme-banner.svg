@@ -1,79 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
-  <title id="title">GWA Gah? banner</title>
-  <desc id="desc">The GWA Gah? logo and name on the left. On the right, the calculator card as it appears above the UM Permanent Record table, with an example GWA of 3.60 (Legend, High Distinction).</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1730"/><stop offset="0.55" stop-color="#132f63"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient>
-    <radialGradient id="glowGold" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#f59e0b" stop-opacity="0.26"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0"/></radialGradient>
-    <radialGradient id="glowBlue" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#60a5fa" stop-opacity="0.32"/><stop offset="1" stop-color="#60a5fa" stop-opacity="0"/></radialGradient>
-    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#93c5fd" opacity="0.15"/></pattern>
-    <linearGradient id="fadeL" x1="0" y1="0" x2="1" y2="0"><stop offset="0.42" stop-color="#fff" stop-opacity="0"/><stop offset="0.62" stop-color="#fff" stop-opacity="1"/></linearGradient>
-    <mask id="tableMask"><rect width="1200" height="440" fill="url(#fadeL)"/></mask>
-    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
-    <linearGradient id="legend" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#6d28d9"/></linearGradient>
-    <linearGradient id="progress" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#10b981"/><stop offset="0.5" stop-color="#2563eb"/><stop offset="1" stop-color="#ef4444"/></linearGradient>
-    <clipPath id="frame"><rect width="1200" height="440" rx="24"/></clipPath>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#030a1a" flood-opacity="0.45"/></filter>
-    <filter id="iconShadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#030a1a" flood-opacity="0.45"/></filter>
-  </defs>
-  <g clip-path="url(#frame)">
-    <rect width="1200" height="440" fill="url(#bg)"/>
-    <rect width="1200" height="440" fill="url(#dots)"/>
-    <circle cx="150" cy="420" r="300" fill="url(#glowGold)"/>
-    <circle cx="1000" cy="40" r="360" fill="url(#glowBlue)"/>
-    <g mask="url(#tableMask)"><g font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="12" fill="#dbeafe" opacity="0.2"><rect x="520" y="0" width="680" height="30" fill="#ffffff" opacity="0.25"/><text x="540" y="20" font-weight="700">Course Number</text><text x="660" y="20" font-weight="700">Descriptive Title</text><text x="950" y="20" font-weight="700">Final Grade</text><text x="1075" y="20" font-weight="700">Unit</text><rect x="520" y="55" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="48">CS 101</text><text x="660" y="48">Introduction to Computing</text><text x="950" y="48">4.0</text><text x="1075" y="48">3</text><rect x="520" y="81" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="74">MATH 103</text><text x="660" y="74">Calculus 1</text><text x="950" y="74">3.5</text><text x="1075" y="74">3</text><rect x="520" y="107" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="100">CS 102</text><text x="660" y="100">Computer Programming 1</text><text x="950" y="100">4.0</text><text x="1075" y="100">3</text><rect x="520" y="133" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="126">GE 1</text><text x="660" y="126">Understanding the Self</text><text x="950" y="126">3.0</text><text x="1075" y="126">3</text><rect x="520" y="159" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="152">CS 103</text><text x="660" y="152">Discrete Structures</text><text x="950" y="152">3.5</text><text x="1075" y="152">3</text><rect x="520" y="185" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="178">NSTP 1</text><text x="660" y="178">National Service Training</text><text x="950" y="178">3.0</text><text x="1075" y="178">3</text><rect x="520" y="211" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="204">CS 104</text><text x="660" y="204">Data Structures</text><text x="950" y="204">3.5</text><text x="1075" y="204">3</text><rect x="520" y="237" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="230">GE 2</text><text x="660" y="230">Readings in Philippine History</text><text x="950" y="230">3.5</text><text x="1075" y="230">3</text><rect x="520" y="263" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="256">CS 101</text><text x="660" y="256">Introduction to Computing</text><text x="950" y="256">4.0</text><text x="1075" y="256">3</text><rect x="520" y="289" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="282">MATH 103</text><text x="660" y="282">Calculus 1</text><text x="950" y="282">3.5</text><text x="1075" y="282">3</text><rect x="520" y="315" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="308">CS 102</text><text x="660" y="308">Computer Programming 1</text><text x="950" y="308">4.0</text><text x="1075" y="308">3</text><rect x="520" y="341" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="334">GE 1</text><text x="660" y="334">Understanding the Self</text><text x="950" y="334">3.0</text><text x="1075" y="334">3</text><rect x="520" y="367" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="360">CS 103</text><text x="660" y="360">Discrete Structures</text><text x="950" y="360">3.5</text><text x="1075" y="360">3</text><rect x="520" y="393" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="386">NSTP 1</text><text x="660" y="386">National Service Training</text><text x="950" y="386">3.0</text><text x="1075" y="386">3</text><rect x="520" y="419" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="412">CS 104</text><text x="660" y="412">Data Structures</text><text x="950" y="412">3.5</text><text x="1075" y="412">3</text><rect x="520" y="445" width="680" height="1" fill="#ffffff" opacity="0.5"/><text x="540" y="438">GE 2</text><text x="660" y="438">Readings in Philippine History</text><text x="950" y="438">3.5</text><text x="1075" y="438">3</text></g></g>
-    
-  <g filter="url(#shadow)"><rect x="640" y="18" width="500" height="404" rx="16" fill="#ffffff"/></g>
-  <rect x="640.5" y="18.5" width="499" height="403" rx="15.5" fill="none" stroke="#e2e8f0"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+  <title id="title">GWA Gah?</title>
+  <desc id="desc">The GWA Gah? calculator logo and name, with an example GWA of 3.60.</desc>
+  <rect x="0.5" y="0.5" width="1199" height="339" rx="24" fill="#f8fafc" stroke="#e2e8f0"/>
+  <g transform="translate(96 106)"><rect x="0" y="0" width="128" height="128" rx="30" fill="#2563eb"/>
+  <rect x="24" y="20" width="80" height="36" rx="9" fill="#ffffff"/>
+  <text x="95" y="48" text-anchor="end" font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="0.5" fill="#2563eb">GG</text>
+  <rect x="24" y="66" width="34" height="20" rx="7" fill="#ffffff" fill-opacity="0.35"/>
+  <rect x="70" y="66" width="34" height="20" rx="7" fill="#ffffff" fill-opacity="0.35"/>
+  <rect x="24" y="94" width="34" height="20" rx="7" fill="#ffffff" fill-opacity="0.35"/>
+  <rect x="70" y="94" width="34" height="20" rx="7" fill="#fbbf24"/>
+  <rect x="80" y="98" width="14" height="4" rx="2" fill="#2563eb"/>
+  <rect x="80" y="106" width="14" height="4" rx="2" fill="#2563eb"/></g>
   <g font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif">
-    <rect x="660" y="38" width="40" height="40" rx="10" fill="url(#tile)"/>
-    <text x="680" y="65" text-anchor="middle" font-size="19" font-family="'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif">📊</text>
-    <text x="712" y="55" font-size="16" font-weight="700" fill="#1e293b">UM GWA Calculator</text>
-    <text x="712" y="73" font-size="12" fill="#64748b">Academic performance tracker</text>
+    <text x="264" y="162" font-size="60" font-weight="800" letter-spacing="-1.8" fill="#0f172a">GWA Gah?</text>
+    <text x="267" y="204" font-size="20" fill="#64748b">Your GWA, right on the UM Permanent Record.</text>
 
-    <rect x="660" y="94" width="460" height="34" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
-    <path d="M890 94.5h220a9.5 9.5 0 0 1 9.5 9.5v14a9.5 9.5 0 0 1 -9.5 9.5h-220z" fill="#2563eb"/>
-    <text x="775" y="115.5" text-anchor="middle" font-size="12.5" font-weight="700" fill="#64748b">Old (1.0–5.0)</text>
-    <text x="1005" y="115.5" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff">New (1.0–4.0)</text>
-
-    <clipPath id="rankClip"><rect x="660" y="140" width="460" height="132" rx="14"/></clipPath>
-    <rect x="660" y="140" width="460" height="132" rx="14" fill="url(#legend)"/>
-    <g clip-path="url(#rankClip)"><circle cx="1100" cy="160" r="50" fill="#ffffff" opacity="0.08"/><circle cx="675" cy="257" r="35" fill="#ffffff" opacity="0.06"/></g>
-    <text x="890" y="179" text-anchor="middle" font-size="30" font-family="'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif">🏆</text>
-    <text x="890" y="223" text-anchor="middle" font-size="44" font-weight="800" letter-spacing="-0.8" fill="#ffffff">3.60</text>
-    <text x="890" y="244" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff" fill-opacity="0.95">Legend</text>
-    <text x="890" y="262" text-anchor="middle" font-size="12.5" fill="#ffffff" fill-opacity="0.7">High Distinction</text>
-
-    <text x="660" y="292" font-size="11.5" font-weight="600" fill="#64748b">1.00 Fail</text>
-    <text x="1120" y="292" text-anchor="end" font-size="11.5" font-weight="600" fill="#64748b">4.00 Best</text>
-    <rect x="660" y="298" width="460" height="8" rx="4" fill="#e2e8f0"/>
-    <rect x="660" y="298" width="398.7" height="8" rx="4" fill="url(#progress)"/>
-
-    <rect x="660" y="314" width="148" height="52" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
-    <text x="734" y="339" text-anchor="middle" font-size="21" font-weight="800" fill="#1e293b">5.0</text>
-    <text x="734" y="357" text-anchor="middle" font-size="10" font-weight="600" letter-spacing="0.4" fill="#64748b">UNITS</text><rect x="816" y="314" width="148" height="52" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
-    <text x="890" y="339" text-anchor="middle" font-size="21" font-weight="800" fill="#1e293b">2</text>
-    <text x="890" y="357" text-anchor="middle" font-size="10" font-weight="600" letter-spacing="0.4" fill="#64748b">COURSES</text><rect x="972" y="314" width="148" height="52" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
-    <text x="1046" y="339" text-anchor="middle" font-size="21" font-weight="800" fill="#1e293b">0</text>
-    <text x="1046" y="357" text-anchor="middle" font-size="10" font-weight="600" letter-spacing="0.4" fill="#64748b">FILTERED</text>
-
-    <rect x="660" y="376" width="460" height="28" rx="10" fill="#fef3c7" stroke="#fde68a"/>
-    <text x="890" y="394.5" text-anchor="middle" font-size="12.5" font-weight="600" fill="#92400e">18.00 ÷ 5.0 = 3.6000</text>
-  </g>
-  </g>
-  <g font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif">
-    <image x="62" y="66" width="108" height="108" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAGkElEQVR4nO2dXYhUZRjH/2e+d2e2HClbTdQybWs1LQz7MMWgsrKgi9KLUvq4CMkgiS4UKhCjbgIxCCo0RLqoK1NBJCqVLDRKiVrN8qNWVldzXXdnmd3ZmdPFMGi05+w5Z96vnff/u9yZOc857/N7n/dj5pwFCCGEEEIIIYQQQgghjY+j+wQAwD36hKv7HHTgtO3Q3v5aTsDWhI+GDiGUBmTig6FSBCWBmPhoqBBBagAmXgwyRYjJOjCTLw6ZbSlFACZfPLLaVGhpYeLVIHJIEFYBmHx1iGxrIQIw+eoR1eYJEQcRwYR3tuo+BaV0r12h+xQACJgD1GOibUn3oh4Z6p0P1PXhqMln4quIqgL1SBD5g0x+dGSU/6gSKJsDMPFVTBn7a0RaBYTt/Ux+FZnJj1qRpW0F12Dyq5jW82uEFoBrfnOJkhupFYC9v4qpvR8IKUAYw5h8PYStAtLnAMRspAjA3i8eWW3KCmA5gQXg7D869fbesJ8PkyvhFYDlXx4y2pZDgCKiJk92h6IACgmbTBXVlAIoJmhSVQ2lxvwiyCZqyR1ph1D1HIoCaMSECTOHAMuhAJZDASyHAlgOBbAcCmA5FMByKIDlUADLoQCWQwEshwJYDgWwHApgORTAciiA5VAAy6EAlkMBLIcCWA4FsBwKYDkUwHIogOVQAMsZU3cGTczHMH9mHPNnJjB7ahz5nIN8NoZrsw4qFReFItBXdPHX+QpOnKugo7OMA0eHcexMGa6Apxvoji+DMSHA4tkJrFqSwaJZPqcbd5BOAuNbHEy9PoYHbr/y0sU+FzsODeHzAyUcOj485uLLJPDzZYM+dULk/W63TIzhw5ezmDMtLuyYs169jO7eypiIPxJBHzkX9NnBxlaAZQtSeG9FE5rTev65pu74qjBSgFWPpvH28iZr46vEOAGW3JXEW8tGb/zvjw1j56ESfvh9GF09FfQWXOQyDsa3OJgxKY57ZiawqD2B9inhyrfu+KoxSoB8zsHGF5vh+FTdzn8qWP3RAL47+v/JVE/BRU/BxZ9nK9j9UwkAMGdaHM8tTmP5ghRSo1yt7vg6MOqU1jyZQT7n3frHzpTx1Lv9uHA5+JrqyKkyjmwZwAe7inhzWRNceH9Wd3wdGCNALuPg2UUpz9cHBl08v6kQqvGv5lR3BS9sKhgbXxfG7AQ+cmcS2Yx37/v06yH80RV9+WR6fF0YI8DCdv9i9MlXgw0dXxfGCDD3Ju/Z8unzFXRekNv7dMfXhTECTLnO+1QOnyw3fHxdGDEJTCXgO/5e7PPvfQ/PTWLba9nA8ea/cRknz105pu74OjGiAqQS/tut/cXGjq8TIwQYGvZfWmXTjR1fJ4YIUF1ne+G3OdMI8XVihABAdabtxR3T5E9VdMfXhTFXduRkGbdNHnkpNr01htZxMZy9NHKS9hwuYcLKS//52zfrW0J9EaM7vi6MqQD7fvX/pcyKxd7btI0QXxfGCLD755LvOPzSQ2lMGi/vdHXH14UxV9RfdLFt75Dn6+OyDj5e1ey7Xh/L8XVhjAAA8P6XRfQUvHvh3TMS2Lkuh1tvlDO26o6vA6MEuNjnYs3mAd/3tE+JY++GFmxencUz96dw8w0xXNPkIBGvLtfaJsex8sE0WvPhL013fB0YswqosevHEjZ8UcS6pzOe74k5wNJ5SSydl2y4+KoxUtONO4t4fcsABkt6fj2jO75KjBQAALZ+O4TH1vfjeJe4b+JcF9j/2zAu9Y+eWN3xVWHcEHA1v5wuY+HaPiydl8Qrj2ci3aDhukBHZxl7Dpfw2b4hnOoO/i2c7vgqMFoAAChXgO0HS9h+sITprTHc15bAvW0JzJgYRz7rIJ9z0Jx2MDDoor/oorfg4sS5Co53ldHxdwX7O0o43xu9x+mOLxvht4YBZvw7tEYk6G1hQPBbwwLPAYIekOgnTK6MnQQSNUgRIEypIsGQ1aasAJYTSoAwYwurgDhkTP5qSK0AlKB+ZLdhaAG4GjCXKLmRPgdgFYiOiraLJEBY0yhBeMK2WdTKHLmch9kZvBruEvoTtbNEFSDyEBA1IKuBN6qTD9RRAWpErQQAq0GNejpFvZNyITP6eiSoYZsMIiqhiBWZMQKQ8IgQQMgykHsD6hHV5sL2ASiBOkS2tZSkcUiQg4xOJmUnkNVAPLLaVNpWMCUQh8y2VJIkDgnRUNGJlPZSihAMldVTS5mmCCOjY9g0Ypy2VQjOkwghhBBCCCGEEEIIIWr4F/r7Dw6qOO9dAAAAAElFTkSuQmCC" xlink:href="data:image/png;base64,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" filter="url(#iconShadow)"/>
-    <text x="192" y="126" font-size="62" font-weight="800" letter-spacing="-1.5" fill="#ffffff">GWA Gah?</text>
-    <text x="195" y="158" font-size="15" font-weight="700" letter-spacing="2" fill="#fcd34d">CHROME EXTENSION · v2.1.0</text>
-    <text x="64" y="240" font-size="27" font-weight="700" fill="#ffffff">Your grades, at a glance.</text>
-    <text x="64" y="272" font-size="16" fill="#bfdbfe">Calculates your GWA right on the</text>
-    <text x="64" y="295" font-size="16" fill="#bfdbfe">UM Student Portal Permanent Record.</text>
-    <g font-size="11.5" font-weight="700" letter-spacing="1.2">
-      <rect x="64" y="330" width="156" height="34" rx="17" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.25"/>
-      <text x="142" y="351.5" text-anchor="middle" fill="#ffffff">OLD &amp; NEW SCALES</text>
-      <rect x="230" y="330" width="134" height="34" rx="17" fill="#f59e0b" fill-opacity="0.16" stroke="#fbbf24" stroke-opacity="0.5"/>
-      <text x="297" y="351.5" text-anchor="middle" fill="#fcd34d">RUNS LOCALLY</text>
-      <rect x="374" y="330" width="122" height="34" rx="17" fill="#10b981" fill-opacity="0.14" stroke="#34d399" stroke-opacity="0.45"/>
-      <text x="435" y="351.5" text-anchor="middle" fill="#6ee7b7">NO SIGN-IN</text>
-    </g>
+    <rect x="852" y="90" width="1" height="160" fill="#e2e8f0"/>
+    <text x="912" y="128" font-size="13" font-weight="600" letter-spacing="2" fill="#94a3b8">EXAMPLE GWA</text>
+    <text x="908" y="196" font-size="68" font-weight="800" letter-spacing="-2" fill="#2563eb">3.60</text>
+    <rect x="912" y="222" width="200" height="6" rx="3" fill="#e2e8f0"/>
+    <rect x="912" y="222" width="173.3" height="6" rx="3" fill="#2563eb"/>
+    <text x="912" y="252" font-size="13" fill="#94a3b8">New system · out of 4.00</text>
   </g>
 </svg>

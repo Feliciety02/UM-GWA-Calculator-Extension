@@ -1,12 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="260" height="64" viewBox="0 0 260 64" role="img" aria-label="Download ZIP, version 2.1.0">
-  <defs><linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f6ff0"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs>
-  <rect width="260" height="64" rx="14" fill="#f59e0b"/>
-  <rect x="3" y="3" width="254" height="58" rx="11" fill="url(#b)"/>
-  <g fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" transform="translate(22 20)">
-    <path d="M12 2v14M6 10l6 6 6-6M3 21h18"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="216" height="52" viewBox="0 0 216 52" role="img" aria-label="Download ZIP">
+  <rect width="216" height="52" rx="26" fill="#2563eb"/>
+  <g fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" transform="translate(30 16)">
+    <path d="M10 1v12M5 8l5 5 5-5M2 19h16"/>
   </g>
-  <g font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif">
-    <text x="60" y="31" font-size="18" font-weight="800" fill="#ffffff">Download ZIP</text>
-    <text x="60" y="48" font-size="12" font-weight="600" fill="#dbeafe">v2.1.0 · Chrome, Edge, Brave</text>
-  </g>
+  <text x="62" y="32" font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Download ZIP</text>
 </svg>

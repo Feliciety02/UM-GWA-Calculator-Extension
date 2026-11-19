@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/readme-banner.svg" width="1200" alt="GWA Gah? logo and name, beside the calculator card as it appears above the UM Permanent Record, showing an example GWA of 3.60">
+  <img src="docs/readme-banner.svg" width="1200" alt="GWA Gah? calculator logo and name, with an example GWA of 3.60">
 </p>
 
 <h1 align="center">GWA Gah?</h1>
@@ -9,7 +9,7 @@
 <p align="center"><code>Version 2.1.0</code> &nbsp; <code>Chrome · Manifest V3</code> &nbsp; <code>Vanilla JavaScript</code> &nbsp; <code>Runs locally</code></p>
 
 <p align="center">
-  <a href="https://github.com/Feliciety02/UM-GWA-Calculator-Extension/archive/refs/heads/main.zip"><img src="docs/download-button.svg" width="260" alt="Download ZIP, version 2.1.0"></a>
+  <a href="https://github.com/Feliciety02/UM-GWA-Calculator-Extension/archive/refs/heads/main.zip"><img src="docs/download-button.svg" width="216" alt="Download ZIP"></a>
   <br>
   <sub>Then follow the <a href="#install-in-chrome">3-step install</a> below. It takes about a minute.</sub>
 </p>
@@ -39,7 +39,7 @@ The extension runs on the Permanent Record page only. It has no separate backend
 
 ## App tour
 
-The card in the banner is drawn to match the real calculator: the same header, Old/New toggle, rank panel, progress bar, stat boxes, and formula line, sitting above the Permanent Record table. It uses **example values** (a 3.60 GWA, which is the purple Legend rank on the new system). Your own GWA and course counts come from your Permanent Record.
+The 3.60 in the banner is an **example value**. Your own GWA and course counts come from your Permanent Record, shown in a calculator card above the record table.
 
 | In the calculator | What it shows |
 | --- | --- |
@@ -124,8 +124,9 @@ Select the system that applies to your record. The grade reference in the calcul
 | [`manifest.json`](manifest.json) | Chrome Manifest V3 settings and Permanent Record URL match |
 | [`content.js`](content.js) | Reads the record, calculates the GWA, and builds the dashboard |
 | [`styles.css`](styles.css) | Calculator layout, colors, ranks, and responsive styles |
-| [`icons/`](icons/) | Blue and gold GG extension icons |
-| [`docs/readme-banner.svg`](docs/readme-banner.svg) | README banner with the logo and a replica of the calculator |
+| [`icons/`](icons/) | Extension icons: a blue calculator reading "GG" |
+| [`docs/logo.svg`](docs/logo.svg) | The calculator logo (source of the `icons/` PNGs) |
+| [`docs/readme-banner.svg`](docs/readme-banner.svg) | README banner |
 | [`docs/download-button.svg`](docs/download-button.svg) | Download ZIP button used in the README |
 
 ## Troubleshooting
