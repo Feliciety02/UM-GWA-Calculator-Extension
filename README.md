@@ -2,6 +2,13 @@
 
 A Chrome extension that calculates your GWA directly on the **UM Student Portal** — with a gamified rank system!
 
+![Manifest V3](https://img.shields.io/badge/Chrome-Manifest%20V3-4285F4?logo=googlechrome&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-vanilla-f7df1e?logo=javascript&logoColor=black)
+![Privacy](https://img.shields.io/badge/grades-never%20leave%20your%20browser-2ea44f)
+![For UMians](https://img.shields.io/badge/made%20for-UMians-8b1a1a)
+
+> ⭐ **Useful? Star the repo and share it with your blockmates!**
+
 ---
 
 ## ✨ Features
@@ -91,3 +98,28 @@ This is a **personal estimate only** — not an official UM record. Always verif
 | Extension not showing | Refresh the Permanent Record page |
 | "No valid courses found" | Make sure you're on the correct page |
 | Wrong GWA | Check that Old/New system toggle matches your batch |
+
+---
+
+## 🔒 Privacy
+
+- Runs only on `student.umindanao.edu.ph`, reading the grades already shown on your Permanent Record
+- No servers, logins, analytics or tracking — nothing is sent anywhere
+- Remove the extension and everything is gone
+
+---
+
+## 🤝 Contributing
+
+Found a wrong computation, a subject that should be excluded, or a portal change that broke it?
+
+1. [Open an issue](../../issues) with a screenshot (hide your name and ID number!)
+2. Or fork the repo, fix it, and send a pull request
+
+---
+
+## 💛 Support
+
+If GWA Gah? saved you from manual computing, **leave a ⭐** and share it with your classmates — it really helps!
+
+Made with 💻 by [Fe Anne Malasarte](https://github.com/Feliciety02), BS Computer Science @ University of Mindanao.
