@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">GWA Gah? illustrated banner</title>
+  <desc id="desc">Blue and gold banner showing a stylized version of the extension's calculator with an example GWA of 3.60.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f1d3a"/><stop offset="0.58" stop-color="#173b78"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+    <linearGradient id="icon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e65ee"/><stop offset="1" stop-color="#1556d3"/></linearGradient>
+    <linearGradient id="rank" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient>
+    <linearGradient id="progress" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#10b981"/><stop offset="0.55" stop-color="#2563eb"/><stop offset="1" stop-color="#ef4444"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#07152e" flood-opacity="0.34"/></filter>
+  </defs>
+  <rect width="1200" height="420" rx="24" fill="url(#background)"/>
+  <circle cx="1090" cy="-55" r="260" fill="#60a5fa" opacity="0.09"/>
+  <circle cx="560" cy="465" r="220" fill="#fbbf24" opacity="0.09"/>
+  <path d="M0 325 C190 270 300 405 500 340 S880 260 1200 345" fill="none" stroke="#93c5fd" stroke-opacity="0.12" stroke-width="2"/>
+  <path d="M0 350 C210 295 330 430 520 365 S900 285 1200 370" fill="none" stroke="#93c5fd" stroke-opacity="0.08" stroke-width="2"/>
+  <g transform="translate(70 65)">
+    <rect width="88" height="88" rx="23" fill="#ffd940"/>
+    <rect x="8" y="8" width="72" height="72" rx="17" fill="url(#icon)"/>
+    <circle cx="72" cy="14" r="8" fill="#ffd940"/>
+    <text x="44" y="58" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="35" font-weight="800" fill="#ffffff">GG</text>
+  </g>
+  <text x="70" y="212" font-family="Arial, Helvetica, sans-serif" font-size="65" font-weight="800" letter-spacing="-2" fill="#ffffff">GWA Gah?</text>
+  <text x="72" y="251" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#dbeafe">Your grades, at a glance.</text>
+  <text x="72" y="289" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#bfdbfe">A GWA calculator for the UM Student Portal</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1.4">
+    <rect x="70" y="326" width="178" height="35" rx="17.5" fill="#ffffff" fill-opacity="0.12" stroke="#ffffff" stroke-opacity="0.25"/>
+    <text x="159" y="348" text-anchor="middle" fill="#ffffff">CHROME EXTENSION</text>
+    <rect x="258" y="326" width="151" height="35" rx="17.5" fill="#fbbf24" fill-opacity="0.16" stroke="#fbbf24" stroke-opacity="0.45"/>
+    <text x="333.5" y="348" text-anchor="middle" fill="#fcd34d">RUNS LOCALLY</text>
+  </g>
+  <g filter="url(#shadow)"><rect x="616" y="35" width="514" height="350" rx="24" fill="#f8fafc"/><rect x="616.5" y="35.5" width="513" height="349" rx="23.5" fill="none" stroke="#e2e8f0"/></g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="642" y="60" width="38" height="38" rx="11" fill="url(#rank)"/>
+    <rect x="651" y="76" width="4" height="13" rx="1" fill="#ffffff"/>
+    <rect x="658" y="69" width="4" height="20" rx="1" fill="#ffffff"/>
+    <rect x="665" y="73" width="4" height="16" rx="1" fill="#ffffff"/>
+    <text x="692" y="76" font-size="16" font-weight="700" fill="#1e293b">UM GWA Calculator</text>
+    <text x="692" y="93" font-size="11" fill="#64748b">Academic performance tracker</text>
+    <rect x="947" y="64" width="157" height="28" rx="8" fill="#e2e8f0"/>
+    <text x="983" y="82" font-size="10" fill="#64748b">Old</text>
+    <rect x="1020" y="64" width="84" height="28" rx="8" fill="#2563eb"/>
+    <text x="1062" y="82" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">New 1–4</text>
+    <rect x="642" y="113" width="462" height="168" rx="17" fill="url(#rank)"/>
+    <circle cx="1050" cy="126" r="73" fill="#ffffff" opacity="0.05"/>
+    <circle cx="702" cy="281" r="67" fill="#ffffff" opacity="0.05"/>
+    <path d="M864 137h18v12c0 10-4 17-9 17s-9-7-9-17z" fill="#fcd34d"/>
+    <path d="M864 141h-6c0 10 4 16 11 17M882 141h6c0 10-4 16-11 17" fill="none" stroke="#fcd34d" stroke-width="3"/>
+    <path d="M873 165v8m-10 0h20" fill="none" stroke="#fcd34d" stroke-linecap="round" stroke-width="3"/>
+    <text x="873" y="224" text-anchor="middle" font-size="61" font-weight="800" fill="#ffffff">3.60</text>
+    <text x="873" y="247" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Legend</text>
+    <text x="873" y="265" text-anchor="middle" font-size="11" fill="#dbeafe">Example GWA</text>
+    <text x="645" y="309" font-size="11" fill="#64748b">1.00 Fail</text>
+    <text x="1101" y="309" text-anchor="end" font-size="11" fill="#64748b">4.00 Best</text>
+    <rect x="642" y="320" width="462" height="9" rx="4.5" fill="#e2e8f0"/>
+    <rect x="642" y="320" width="400" height="9" rx="4.5" fill="url(#progress)"/>
+    <rect x="642" y="343" width="144" height="28" rx="8" fill="#edf2f8"/>
+    <rect x="801" y="343" width="144" height="28" rx="8" fill="#edf2f8"/>
+    <rect x="960" y="343" width="144" height="28" rx="8" fill="#edf2f8"/>
+    <text x="714" y="361" text-anchor="middle" font-size="11" fill="#334155"><tspan font-weight="700">5.0</tspan> units</text>
+    <text x="873" y="361" text-anchor="middle" font-size="11" fill="#334155"><tspan font-weight="700">2</tspan> courses</text>
+    <text x="1032" y="361" text-anchor="middle" font-size="11" fill="#334155"><tspan font-weight="700">0</tspan> filtered</text>
+  </g>
+</svg>
