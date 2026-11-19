@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/readme-banner.svg" width="1200" alt="Illustrated GWA Gah banner in the extension's blue and gold style, with an example GWA calculator card">
+  <img src="docs/readme-banner.svg" width="1200" alt="GWA Gah? logo and name, beside the calculator card as it appears above the UM Permanent Record, showing an example GWA of 3.60">
 </p>
 
 <h1 align="center">GWA Gah?</h1>
@@ -7,6 +7,12 @@
 <p align="center">A Chrome extension that calculates your general weighted average (GWA) from your University of Mindanao Permanent Record and shows your progress in a game-inspired dashboard.</p>
 
 <p align="center"><code>Version 2.1.0</code> &nbsp; <code>Chrome · Manifest V3</code> &nbsp; <code>Vanilla JavaScript</code> &nbsp; <code>Runs locally</code></p>
+
+<p align="center">
+  <a href="https://github.com/Feliciety02/UM-GWA-Calculator-Extension/archive/refs/heads/main.zip"><img src="docs/download-button.svg" width="260" alt="Download ZIP, version 2.1.0"></a>
+  <br>
+  <sub>Then follow the <a href="#install-in-chrome">3-step install</a> below. It takes about a minute.</sub>
+</p>
 
 <p align="center">
   <a href="#at-a-glance"><strong>At a glance</strong></a> &nbsp;·&nbsp;
@@ -33,7 +39,7 @@ The extension runs on the Permanent Record page only. It has no separate backend
 
 ## App tour
 
-The banner above is an **illustration with example values**, styled after the actual extension: a blue and gold icon, rounded white card, blue rank panel, and progress bar. Your own GWA and course counts come from your Permanent Record.
+The card in the banner is drawn to match the real calculator: the same header, Old/New toggle, rank panel, progress bar, stat boxes, and formula line, sitting above the Permanent Record table. It uses **example values** (a 3.60 GWA, which is the purple Legend rank on the new system). Your own GWA and course counts come from your Permanent Record.
 
 | In the calculator | What it shows |
 | --- | --- |
@@ -75,12 +81,27 @@ Filtered rows are highlighted in the portal table and listed with their reason u
 
 ## Install in Chrome
 
-1. Download this repository with **Code → Download ZIP**, then extract it. If you cloned it with Git, use your cloned folder instead.
-2. Open `chrome://extensions` in Chrome and turn on **Developer mode**.
-3. Click **Load unpacked** and select the extracted folder that contains [`manifest.json`](manifest.json). The folder name may vary.
-4. Open the [UM Student Portal Permanent Record](https://student.umindanao.edu.ph/student/spr) and sign in. The calculator appears above the record table when its grades load.
+GWA Gah? is not on the Chrome Web Store, so you load it yourself. It works in Chrome and in other Chromium browsers such as Edge and Brave.
 
-After pulling or downloading an update, return to `chrome://extensions` and click the extension's **Reload** button, then refresh the Permanent Record page.
+**1. Download and unzip**
+
+[**⬇ Download the ZIP**](https://github.com/Feliciety02/UM-GWA-Calculator-Extension/archive/refs/heads/main.zip), then unzip it: on Windows, right-click the file and choose **Extract All**; on a Mac, double-click it. You get a folder named `UM-GWA-Calculator-Extension-main`. Keep it somewhere permanent, such as Documents, because the browser loads the extension from that folder every time.
+
+**2. Load it into the browser**
+
+| Chrome | Edge | Brave |
+| --- | --- | --- |
+| Go to `chrome://extensions` | Go to `edge://extensions` | Go to `brave://extensions` |
+
+Turn on **Developer mode** (top right in Chrome and Brave, left sidebar in Edge), click **Load unpacked**, and select the `UM-GWA-Calculator-Extension-main` folder. Select the folder that directly contains [`manifest.json`](manifest.json). If the folder you picked only contains another folder with the same name, open it and select the inner one.
+
+**3. Open your Permanent Record**
+
+Sign in to the [UM Student Portal Permanent Record](https://student.umindanao.edu.ph/student/spr). The calculator appears above the record table once your grades load. Pin the extension from the puzzle-piece menu if you want its icon in the toolbar.
+
+### Updating
+
+Download the ZIP again and replace the files in your existing folder. Then click **Reload** (↻) on the extension's card in the extensions page and refresh the Permanent Record. If you cloned the repository with Git, run `git pull` instead of downloading.
 
 ## Grading systems and ranks
 
@@ -104,7 +125,8 @@ Select the system that applies to your record. The grade reference in the calcul
 | [`content.js`](content.js) | Reads the record, calculates the GWA, and builds the dashboard |
 | [`styles.css`](styles.css) | Calculator layout, colors, ranks, and responsive styles |
 | [`icons/`](icons/) | Blue and gold GG extension icons |
-| [`docs/readme-banner.svg`](docs/readme-banner.svg) | Illustrated README banner |
+| [`docs/readme-banner.svg`](docs/readme-banner.svg) | README banner with the logo and a replica of the calculator |
+| [`docs/download-button.svg`](docs/download-button.svg) | Download ZIP button used in the README |
 
 ## Troubleshooting
 

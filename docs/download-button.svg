@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="64" viewBox="0 0 260 64" role="img" aria-label="Download ZIP, version 2.1.0">
+  <defs><linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f6ff0"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs>
+  <rect width="260" height="64" rx="14" fill="#f59e0b"/>
+  <rect x="3" y="3" width="254" height="58" rx="11" fill="url(#b)"/>
+  <g fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" transform="translate(22 20)">
+    <path d="M12 2v14M6 10l6 6 6-6M3 21h18"/>
+  </g>
+  <g font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif">
+    <text x="60" y="31" font-size="18" font-weight="800" fill="#ffffff">Download ZIP</text>
+    <text x="60" y="48" font-size="12" font-weight="600" fill="#dbeafe">v2.1.0 · Chrome, Edge, Brave</text>
+  </g>
+</svg>
