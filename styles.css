@@ -1,23 +1,25 @@
+/* GWA Gah? — minimal calculator panel, matching the logo and README banner:
+   one white card, hairline borders, one blue accent, a gold highlight. */
 #um-gwa-calculator {
   --um-blue: #2563eb;
-  --um-blue-dark: #1d4ed8;
-  --um-blue-light: #dbeafe;
-  --um-gold: #f59e0b;
-  --um-gold-light: #fef3c7;
-  --um-green: #10b981;
-  --um-red: #ef4444;
-  --um-gray: #64748b;
+  --um-blue-soft: #eff4ff;
+  --um-gold: #fbbf24;
+  --um-red: #dc2626;
   --um-bg: #f8fafc;
   --um-card: #ffffff;
   --um-border: #e2e8f0;
-  --um-text: #1e293b;
+  --um-text: #0f172a;
   --um-text-sub: #64748b;
-  --um-radius: 14px;
+  --um-text-faint: #94a3b8;
 
   all: initial;
   display: block;
   margin: 0 0 1rem;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  padding: 1.5rem;
+  background: var(--um-card);
+  border: 1px solid var(--um-border);
+  border-radius: 16px;
+  font-family: 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif;
   color: var(--um-text);
   line-height: 1.5;
 }
@@ -28,36 +30,31 @@
   padding: 0;
 }
 
-#um-gwa-calculator .um-card {
-  background: var(--um-card);
-  border: 1px solid var(--um-border);
-  border-radius: var(--um-radius);
-  padding: 1.25rem;
-  margin-bottom: 0.75rem;
-}
-
 /* ── Header ── */
 #um-gwa-calculator .um-header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.75rem;
 }
 
-#um-gwa-calculator .um-icon {
+#um-gwa-calculator .um-logo {
   width: 40px;
   height: 40px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--um-blue), var(--um-gold));
-  display: grid;
-  place-items: center;
-  font-size: 1.2rem;
   flex-shrink: 0;
+  display: block;
+}
+
+#um-gwa-calculator .um-header-text {
+  flex: 1;
+  min-width: 0;
 }
 
 #um-gwa-calculator .um-header-text h3 {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
   color: var(--um-text);
 }
 
@@ -66,31 +63,31 @@
   color: var(--um-text-sub);
 }
 
-/* ── Grading System Toggle ── */
+/* ── Grading system switch ── */
 #um-gwa-calculator .um-sys-toggle {
-  display: flex;
-  gap: 0;
+  display: inline-flex;
+  padding: 3px;
+  background: var(--um-bg);
   border: 1px solid var(--um-border);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 0.75rem;
+  border-radius: 999px;
+  flex-shrink: 0;
 }
 
 #um-gwa-calculator .um-sys-btn {
-  flex: 1;
-  padding: 0.55rem 0.75rem;
+  padding: 0.35rem 0.8rem;
   border: none;
-  background: var(--um-bg);
+  border-radius: 999px;
+  background: transparent;
   font-family: inherit;
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  cursor: pointer;
   color: var(--um-text-sub);
-  transition: all 0.15s ease;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
-#um-gwa-calculator .um-sys-btn:first-child {
-  border-right: 1px solid var(--um-border);
+#um-gwa-calculator .um-sys-btn:hover:not(.active) {
+  color: var(--um-text);
 }
 
 #um-gwa-calculator .um-sys-btn.active {
@@ -98,86 +95,131 @@
   color: #fff;
 }
 
-#um-gwa-calculator .um-sys-btn:hover:not(.active) {
-  background: var(--um-border);
-}
-
-/* ── Rank Banner ── */
+/* ── GWA ── */
 #um-gwa-calculator .um-rank {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  background: linear-gradient(135deg, var(--um-blue), var(--um-blue-dark));
-  border-radius: var(--um-radius);
-  color: #fff;
-  margin-bottom: 0.75rem;
-  position: relative;
-  overflow: hidden;
+  margin-bottom: 1.25rem;
 }
 
-#um-gwa-calculator .um-rank::before {
-  content: '';
-  position: absolute;
-  top: -30px;
-  right: -30px;
-  width: 100px;
-  height: 100px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 50%;
+#um-gwa-calculator .um-rank-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--um-text-faint);
+  margin-bottom: 0.15rem;
 }
 
-#um-gwa-calculator .um-rank::after {
-  content: '';
-  position: absolute;
-  bottom: -20px;
-  left: -20px;
-  width: 70px;
-  height: 70px;
-  background: rgba(255,255,255,0.06);
-  border-radius: 50%;
-}
-
-#um-gwa-calculator .um-rank-badge {
-  display: inline-block;
-  font-size: 2.2rem;
-  margin-bottom: 0.25rem;
+#um-gwa-calculator .um-rank-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
 }
 
 #um-gwa-calculator .um-rank-gwa {
-  font-size: 2.8rem;
+  font-size: 3.4rem;
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
   line-height: 1;
-  margin-bottom: 0.25rem;
+  color: var(--um-blue);
+  font-variant-numeric: tabular-nums;
 }
 
-#um-gwa-calculator .um-rank-title {
-  font-size: 1rem;
+#um-gwa-calculator .um-rank-tag {
+  --rank: var(--um-blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--um-border);
+  border-radius: 999px;
+  font-size: 0.78rem;
   font-weight: 700;
-  opacity: 0.95;
+  color: var(--um-text);
+}
+
+#um-gwa-calculator .um-rank-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--rank);
 }
 
 #um-gwa-calculator .um-rank-sub {
-  font-size: 0.78rem;
-  opacity: 0.7;
-  margin-top: 0.2rem;
-}
-
-/* ── Progress Bar ── */
-#um-gwa-calculator .um-progress-wrap {
-  margin-bottom: 0.75rem;
-}
-
-#um-gwa-calculator .um-progress-label {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--um-text-sub);
-  margin-bottom: 0.4rem;
+}
+
+#um-gwa-calculator .um-rank-sub::before {
+  content: '·';
+  margin-right: 0.4rem;
+  color: var(--um-text-faint);
+}
+
+#um-gwa-calculator .rank-legend { --rank: #7c3aed; }
+#um-gwa-calculator .rank-master { --rank: #2563eb; }
+#um-gwa-calculator .rank-scholar { --rank: #0891b2; }
+#um-gwa-calculator .rank-achiever { --rank: #059669; }
+#um-gwa-calculator .rank-player { --rank: #d97706; }
+#um-gwa-calculator .rank-rookie { --rank: #ea580c; }
+#um-gwa-calculator .rank-struggling { --rank: #dc2626; }
+
+/* ── View more ── */
+#um-gwa-calculator .um-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--um-blue);
+  cursor: pointer;
+}
+
+#um-gwa-calculator .um-more-btn::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-bottom: 3px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+
+#um-gwa-calculator .um-more-btn[aria-expanded="true"]::after {
+  margin-bottom: -3px;
+  transform: rotate(-135deg);
+}
+
+#um-gwa-calculator .um-more-btn:hover {
+  color: #1d4ed8;
+}
+
+#um-gwa-calculator .um-more-btn:focus-visible {
+  outline: 2px solid var(--um-blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+#um-gwa-calculator .um-more {
+  margin-top: 1.25rem;
+}
+
+#um-gwa-calculator .um-more[hidden] {
+  display: none;
+}
+
+/* ── Progress ── */
+#um-gwa-calculator .um-progress-wrap {
+  margin-bottom: 1.5rem;
 }
 
 #um-gwa-calculator .um-progress-bar {
-  height: 8px;
+  height: 6px;
   background: var(--um-border);
   border-radius: 99px;
   overflow: hidden;
@@ -186,104 +228,131 @@
 #um-gwa-calculator .um-progress-fill {
   height: 100%;
   border-radius: 99px;
+  background: var(--um-blue);
   transition: width 0.6s ease;
-  background: linear-gradient(90deg, var(--um-green), var(--um-blue), var(--um-red));
 }
 
-/* ── Stats Grid ── */
+#um-gwa-calculator .um-progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+  font-size: 0.7rem;
+  color: var(--um-text-faint);
+}
+
+/* ── Stats ── */
 #um-gwa-calculator .um-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.6rem;
+  border-top: 1px solid var(--um-border);
+  border-bottom: 1px solid var(--um-border);
   margin-bottom: 0.75rem;
 }
 
 #um-gwa-calculator .um-stat {
+  padding: 0.9rem 0;
   text-align: center;
-  padding: 0.8rem 0.5rem;
-  background: var(--um-bg);
-  border-radius: 10px;
-  border: 1px solid var(--um-border);
+}
+
+#um-gwa-calculator .um-stat + .um-stat {
+  border-left: 1px solid var(--um-border);
 }
 
 #um-gwa-calculator .um-stat-value {
   font-size: 1.3rem;
   font-weight: 800;
-  color: var(--um-text);
   line-height: 1;
+  color: var(--um-text);
+  font-variant-numeric: tabular-nums;
 }
 
 #um-gwa-calculator .um-stat-label {
-  font-size: 0.68rem;
+  margin-top: 0.35rem;
+  font-size: 0.66rem;
   font-weight: 600;
-  color: var(--um-text-sub);
-  margin-top: 0.3rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  color: var(--um-text-faint);
 }
 
 /* ── Formula ── */
 #um-gwa-calculator .um-formula {
-  padding: 0.7rem 0.85rem;
-  background: var(--um-gold-light);
-  border: 1px solid #fde68a;
-  border-radius: 10px;
-  font-size: 0.8rem;
-  color: #92400e;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.75rem;
+  color: var(--um-text-faint);
 }
 
-/* ── Details (collapsible) ── */
+#um-gwa-calculator .um-formula span:last-child {
+  color: var(--um-text-sub);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Collapsible sections ── */
 #um-gwa-calculator .um-details {
-  margin-bottom: 0.75rem;
+  border-top: 1px solid var(--um-border);
+}
+
+#um-gwa-calculator .um-details:last-of-type {
+  border-bottom: 1px solid var(--um-border);
+  margin-bottom: 1.25rem;
 }
 
 #um-gwa-calculator .um-details summary {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 0.85rem;
-  background: var(--um-card);
-  border: 1px solid var(--um-border);
-  border-radius: 10px;
+  gap: 0.5rem;
+  padding: 0.8rem 0;
   font-size: 0.82rem;
   font-weight: 700;
+  color: var(--um-text);
   cursor: pointer;
   user-select: none;
   list-style: none;
-  color: var(--um-text);
 }
 
 #um-gwa-calculator .um-details summary::-webkit-details-marker {
   display: none;
 }
 
+#um-gwa-calculator .um-details summary span:first-child {
+  flex: 1;
+}
+
+#um-gwa-calculator .um-details summary span:nth-child(2) {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--um-text-faint);
+}
+
 #um-gwa-calculator .um-details summary::after {
-  content: '▸';
-  font-size: 0.9rem;
-  color: var(--um-text-sub);
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin: 0 4px 3px 4px;
+  border-right: 1.5px solid var(--um-text-faint);
+  border-bottom: 1.5px solid var(--um-text-faint);
+  transform: rotate(45deg);
   transition: transform 0.2s;
 }
 
 #um-gwa-calculator .um-details[open] summary::after {
-  transform: rotate(90deg);
+  margin-bottom: -3px;
+  transform: rotate(-135deg);
 }
 
 #um-gwa-calculator .um-details summary:hover {
-  background: var(--um-bg);
+  color: var(--um-blue);
 }
 
 #um-gwa-calculator .um-details-body {
-  padding: 0.75rem;
-  border: 1px solid var(--um-border);
-  border-top: 0;
-  border-radius: 0 0 10px 10px;
-  background: var(--um-card);
+  padding: 0 0 1rem;
 }
 
-/* ── Term Table ── */
+/* ── Tables ── */
 #um-gwa-calculator .um-term-table {
   width: 100%;
   border-collapse: collapse;
@@ -292,18 +361,19 @@
 
 #um-gwa-calculator .um-term-table th,
 #um-gwa-calculator .um-term-table td {
-  padding: 0.55rem 0.65rem;
+  padding: 0.5rem 0;
   text-align: left;
+  background: none;
+  border: 0;
   border-bottom: 1px solid var(--um-border);
 }
 
 #um-gwa-calculator .um-term-table th {
-  font-weight: 700;
-  font-size: 0.7rem;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--um-text-sub);
-  background: var(--um-bg);
+  color: var(--um-text-faint);
 }
 
 #um-gwa-calculator .um-term-table td:not(:first-child),
@@ -316,7 +386,16 @@
   border-bottom: 0;
 }
 
-/* ── Excluded List ── */
+/* ── Excluded entries ── */
+#um-gwa-calculator .um-subhead {
+  margin: 1rem 0 0.25rem;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--um-text-faint);
+}
+
 #um-gwa-calculator .um-excluded-list {
   list-style: none;
 }
@@ -325,7 +404,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0.65rem;
+  gap: 1rem;
+  padding: 0.45rem 0;
   border-bottom: 1px solid var(--um-border);
   font-size: 0.78rem;
 }
@@ -335,14 +415,13 @@
 }
 
 #um-gwa-calculator .um-excluded-course {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--um-text);
 }
 
 #um-gwa-calculator .um-excluded-reason {
-  color: var(--um-red);
   font-size: 0.72rem;
-  font-weight: 600;
+  color: var(--um-text-sub);
 }
 
 #um-gwa-calculator .um-excluded-empty {
@@ -356,28 +435,31 @@
 #um-gwa-calculator .um-actions {
   display: flex;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 #um-gwa-calculator .um-btn {
   flex: 1;
-  padding: 0.6rem 0.75rem;
-  border-radius: 10px;
-  border: none;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
   font-family: inherit;
   font-size: 0.8rem;
   font-weight: 700;
   cursor: pointer;
-  transition: opacity 0.15s, transform 0.15s;
+  transition: background 0.15s ease, border-color 0.15s ease;
 }
 
-#um-gwa-calculator .um-btn:hover {
-  transform: translateY(-1px);
+#um-gwa-calculator .um-btn:focus-visible,
+#um-gwa-calculator .um-sys-btn:focus-visible,
+#um-gwa-calculator .um-details summary:focus-visible {
+  outline: 2px solid var(--um-blue);
+  outline-offset: 2px;
 }
 
 #um-gwa-calculator .um-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  transform: none;
 }
 
 #um-gwa-calculator .um-btn-primary {
@@ -385,65 +467,60 @@
   color: #fff;
 }
 
+#um-gwa-calculator .um-btn-primary:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
 #um-gwa-calculator .um-btn-secondary {
-  background: var(--um-bg);
+  background: var(--um-card);
   color: var(--um-text);
-  border: 1px solid var(--um-border);
+  border-color: var(--um-border);
+}
+
+#um-gwa-calculator .um-btn-secondary:hover:not(:disabled) {
+  border-color: var(--um-text-faint);
 }
 
 /* ── Note ── */
 #um-gwa-calculator .um-note {
-  font-size: 0.72rem;
-  color: var(--um-text-sub);
-  padding: 0.6rem 0.75rem;
-  background: var(--um-bg);
-  border-radius: 8px;
-  border: 1px solid var(--um-border);
+  font-size: 0.7rem;
+  color: var(--um-text-faint);
+  text-align: center;
 }
 
-/* ── Excluded rows on page ── */
+/* ── Excluded rows on the record page ── */
 tr.um-gwa-excluded-row > td {
   background: #fef2f2 !important;
-  box-shadow: inset 3px 0 0 var(--um-red);
 }
 
-/* ── Rank color overrides ── */
-#um-gwa-calculator .um-rank.rank-legend {
-  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+tr.um-gwa-excluded-row > td:first-child {
+  box-shadow: inset 2px 0 0 #fca5a5;
 }
 
-#um-gwa-calculator .um-rank.rank-master {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-}
-
-#um-gwa-calculator .um-rank.rank-scholar {
-  background: linear-gradient(135deg, #0891b2, #0e7490);
-}
-
-#um-gwa-calculator .um-rank.rank-achiever {
-  background: linear-gradient(135deg, #059669, #047857);
-}
-
-#um-gwa-calculator .um-rank.rank-player {
-  background: linear-gradient(135deg, #d97706, #b45309);
-}
-
-#um-gwa-calculator .um-rank.rank-rookie {
-  background: linear-gradient(135deg, #ea580c, #c2410c);
-}
-
-#um-gwa-calculator .um-rank.rank-struggling {
-  background: linear-gradient(135deg, #dc2626, #b91c1c);
-}
-
-/* ── Responsive ── */
+/* ── Small screens ── */
 @media (max-width: 480px) {
-  #um-gwa-calculator .um-stats {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.4rem;
+  #um-gwa-calculator {
+    padding: 1.1rem;
+  }
+
+  #um-gwa-calculator .um-header {
+    flex-wrap: wrap;
+  }
+
+  #um-gwa-calculator .um-sys-toggle {
+    width: 100%;
+  }
+
+  #um-gwa-calculator .um-sys-btn {
+    flex: 1;
   }
 
   #um-gwa-calculator .um-rank-gwa {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
+  }
+
+  #um-gwa-calculator .um-formula {
+    flex-direction: column;
+    gap: 0.15rem;
   }
 }

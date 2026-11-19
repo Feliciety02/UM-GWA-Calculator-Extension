@@ -4,6 +4,7 @@
   const PANEL_ID = "um-gwa-calculator";
   const EXCLUDED_ROW_CLASS = "um-gwa-excluded-row";
   const GRADING_SYS_KEY = "um-gwa-grading-system";
+  let showMore = false; // kept while switching systems or recalculating
 
   function normalize(value) {
     return String(value ?? "").replace(/\s+/g, " ").trim();
@@ -291,7 +292,7 @@
     // Formula
     const formula = el("div", "um-formula",
       Number.isFinite(result.gwa)
-        ? `<span>Grade × units ÷ units</span><span>${fmt(result.weightedPoints, 2)} ÷ ${fmt(result.totalUnits, 1)} = ${fmt(result.gwa, 4)}</span>`
+        ? `<span>Σ(grade × units) ÷ Σ units</span><span>${fmt(result.weightedPoints, 2)} ÷ ${fmt(result.totalUnits, 1)} = ${fmt(result.gwa, 4)}</span>`
         : "<span>No valid courses found.</span>"
     );
 
@@ -360,7 +361,24 @@
     );
 
     // Assemble
-    panel.append(header, rankBanner, progress, stats, formula, refDetails, details, actions, note);
+    // Minimal by default: just the grade. Everything else sits behind "View more".
+    const more = el("div", "um-more");
+    more.id = `${PANEL_ID}-more`;
+    more.hidden = !showMore;
+    more.append(progress, stats, formula, refDetails, details, actions, note);
+
+    const moreBtn = el("button", "um-more-btn", showMore ? "View less" : "View more");
+    moreBtn.type = "button";
+    moreBtn.setAttribute("aria-expanded", String(showMore));
+    moreBtn.setAttribute("aria-controls", more.id);
+    moreBtn.addEventListener("click", () => {
+      showMore = !showMore;
+      more.hidden = !showMore;
+      moreBtn.textContent = showMore ? "View less" : "View more";
+      moreBtn.setAttribute("aria-expanded", String(showMore));
+    });
+
+    panel.append(header, rankBanner, moreBtn, more);
 
     const tableContainer = table.closest(".card") || table.parentElement;
     tableContainer.parentElement.insertBefore(panel, tableContainer);
